@@ -1,0 +1,33 @@
+.home-container {
+    display: flex;
+    .gesammten-filme {
+        width: 70%;
+        min-height: calc(100vh - 5rem);
+        border-right: 0.1rem solid darkgray;
+        padding: 1.25rem 2.5rem;
+        font-family: "Caveat", sans-serif,  cursive;
+        .hyped {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h4 {
+                text-transform: uppercase;
+                font-weight: bold;
+                border-left: 0.5rem solid orangered;
+                padding-left: 0.7rem;
+            }
+            .alle-sehen {
+                font-size: xx-large;
+                font-weight: bold;
+                color: orangered;
+                cursor: pointer;
+            }
+        }
+    }
+    .beliebte-filme {
+        width: 30%;
+        min-height: calc(10vh - 5rem);
+        padding: 20px 40px;
+        font-family: "Caveat", sans-serif,  cursive;
+    }
+}
