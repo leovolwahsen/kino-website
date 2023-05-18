@@ -7,6 +7,8 @@ import { LoginComponent } from './login/login.component';
 import { HauptseiteComponent } from './hauptseite/hauptseite.component';
 import { ObenComponent } from './oben/oben.component';
 import { FilmComponent } from './film/film.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { FilmComponent } from './film/film.component';
     LoginComponent,
     HauptseiteComponent,
     ObenComponent,
-    FilmComponent
+    FilmComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

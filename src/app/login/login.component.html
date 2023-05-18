@@ -1,21 +1,42 @@
 <div class="login-container">
-    <img class="film" src="assets/bilder/Kameraband-bild.jpg" alt="Kameraband-bild">
-    <div class="logo">Kinofilmbewertung</div>
-    <div class="beschreibung">
-        Kinofilmbewertung ist eine umfassende Film-Bewertungswebsite, die Filmbegeisterten eine verlässliche und vielfältige Plattform bietet, um Filme zu entdecken, zu bewerten und Empfehlungen zu erhalten.
-        Mit einer umfangreichen Datenbank von Filmen aus verschiedenen Genres und Ländern können Benutzer mühelos nach ihren Lieblingsfilmen suchen oder neue Entdeckungen machen. Die Website bietet detaillierte Informationen zu jedem Film, darunter Handlungszusammenfassungen, Besetzungslisten, Trailer und Rezensionen von Kritikern und Nutzern.
+  <img
+    class="film"
+    src="assets/bilder/Kameraband-bild.jpg"
+    alt="Kameraband-bild"
+  />
+  <div class="logo">Kinofilmbewertung</div>
+  <div class="beschreibung">
+    Kinofilmbewertung ist eine umfassende Film-Bewertungswebsite, die
+    Filmbegeisterten eine verlässliche und vielfältige Plattform bietet, um
+    Filme zu entdecken, zu bewerten und Empfehlungen zu erhalten. Mit einer
+    umfangreichen Datenbank von Filmen aus verschiedenen Genres und Ländern
+    können Benutzer mühelos nach ihren Lieblingsfilmen suchen oder neue
+    Entdeckungen machen. Die Website bietet detaillierte Informationen zu jedem
+    Film, darunter Handlungszusammenfassungen, Besetzungslisten, Trailer und
+    Rezensionen von Kritikern und Nutzern.
+  </div>
+  <div class="login-form">
+    <div class="form-gruppe">
+      <label for="benutzername">Benutzername</label>
+      <input
+        type="text" 
+        name="benutzername"
+        class="form-control"
+        [(ngModel)]="benutzername"
+      />
     </div>
-        <div class="login-form">
-            <div class="form-gruppe">
-                <label for="benutzername">Benutzername</label>
-                <input type="text" name="benutzername" class="form-control">
-            </div>
-            <div class="form-gruppe">
-                <label for="passwort">Passwort</label>
-                <input type="password" name="passwort" class="form-control">
-            </div>
-            <div class="btn-container">
-                <button class="btn btn-secondary">Login</button>
-            </div>
-        </div>
+    <div class="form-gruppe">
+      <label for="password">Passwort</label>
+      <input
+        type="password"
+        name="password"
+        class="form-control"
+        [(ngModel)]="password"
+      />
+    </div>
+    <div class="btn-container">
+      <div class="error">{{ errorMsg }}</div>
+      <button class="btn btn-secondary" (click)="login()">Login</button>
+    </div>
+  </div>
 </div>
