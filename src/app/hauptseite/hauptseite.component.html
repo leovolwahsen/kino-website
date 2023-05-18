@@ -7,13 +7,14 @@
                 <div class="alle-sehen">Alle sehen</div>
             </div>
             <div class="film-miniaturansicht">
-                <div class="film">
+                <div class="film" *ngFor="let filme of tendingeFilme">
                     <div class="ansicht">
-                        <img src="" alt="">
+                        <img [src]="filme.ansicht" alt="Filme">
                     </div>
                     <div class="details">
-                        <div class="name"></div>
-                        <div class="bewertung"></div>
+                        <div class="name">{{ filme.name }}</div>
+                        <div class="bewertung">{{ filme.bewertung }}</div>
+                        console.log({{filme}})
                     </div>
                 </div>
             </div>
