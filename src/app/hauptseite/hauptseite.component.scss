@@ -10,6 +10,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            margin-bottom: 1rem;
             h4 {
                 text-transform: uppercase;
                 font-weight: bold;
@@ -22,6 +23,26 @@
                 color: orangered;
                 cursor: pointer;
             }
+        }
+        .film-miniaturansicht {
+            display: flex;
+            justify-content: space-between;
+        .film {
+            .ansicht {
+                img {
+                    border-radius: 0.32rem;
+                }
+            }
+            .details {
+                width: 11.25rem;
+                .name {
+                    font-weight: bold;
+                    height: 3.2rem;
+                    margin-top: 0.32rem;
+                    cursor: pointer;
+                }
+            }
+        }
         }
     }
     .beliebte-filme {

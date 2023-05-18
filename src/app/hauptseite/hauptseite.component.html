@@ -13,7 +13,13 @@
                     </div>
                     <div class="details">
                         <div class="name">{{ filme.name }}</div>
-                        <div class="bewertung">{{ filme.rating }}</div>
+                        <div class="bewertung">
+                            <!-- <ngb-rating [(rate)]="filme.rating">
+                                <ng-template let-fill="fill" let-index="index">
+                                    <i class="bi-star{{fill === 100 ? '-fill' : ''}}" [class.filled]="fill === 100" [class.low]="index < 3"></i>
+                                </ng-template>
+                            </ngb-rating> -->
+                        </div>
                         
                     </div>
                 </div>
