@@ -36,10 +36,34 @@
             .details {
                 width: 11.25rem;
                 .name {
+                    font-size: 1.75rem;
                     font-weight: bold;
+                    display: flex;
+                    align-items: center;
                     height: 3.2rem;
-                    margin-top: 0.32rem;
+                    margin-top: 1.5rem;
                     cursor: pointer;
+                }
+                .bewertung {
+                    position: relative;
+                    text-align: center;
+                    color: white;
+                    .fa-solid {
+                        color: rgb(255, 204, 0);
+                        font-size: 4rem;
+                        margin: 1rem;
+                        filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+                    }
+                    .mittig {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        color: black;
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                        transform: translate(-50%, -50%);
+                        
+                    }
                 }
             }
         }
