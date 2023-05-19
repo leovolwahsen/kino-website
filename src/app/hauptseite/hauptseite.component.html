@@ -13,8 +13,7 @@
           </div>
           <div class="details">
             <div class="name">{{ filme.name }}</div>
-            <div class="bewertung">
-              <ngb-rating [max]="5" [(rate)]="filme.rating" [readonly]="false"> {{filme.rating}}</ngb-rating>
+            <div class="bewertung">{{ filme.rating }}
             </div>
           </div>
         </div>

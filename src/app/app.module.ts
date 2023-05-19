@@ -9,7 +9,7 @@ import { ObenComponent } from './oben/oben.component';
 import { FilmComponent } from './film/film.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 
 @NgModule({
@@ -24,9 +24,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule, 
-    NgbModule,
-
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
