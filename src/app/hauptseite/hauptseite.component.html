@@ -1,30 +1,25 @@
 <app-oben></app-oben>
 <div class="home-container">
-    <div class="gesammten-filme">
-        <div class="hyped-filme">
-            <div class="hyped">
-                <h4>Beliebtesten Filme</h4>
-                <div class="alle-sehen">Alle sehen</div>
+  <div class="gesammten-filme">
+    <div class="hyped-filme">
+      <div class="hyped">
+        <h4>Beliebtesten Filme</h4>
+        <div class="alle-sehen">Alle sehen</div>
+      </div>
+      <div class="film-miniaturansicht">
+        <div class="film" *ngFor="let filme of tendingeFilme">
+          <div class="ansicht">
+            <img [src]="filme.cover" alt="" />
+          </div>
+          <div class="details">
+            <div class="name">{{ filme.name }}</div>
+            <div class="bewertung">
+              <ngb-rating [max]="5" [(rate)]="filme.rating" [readonly]="false"> {{filme.rating}}</ngb-rating>
             </div>
-            <div class="film-miniaturansicht">
-                <div class="film" *ngFor="let filme of tendingeFilme">
-                    <div class="ansicht">
-                        <img [src]="filme.cover" alt="">
-                    </div>
-                    <div class="details">
-                        <div class="name">{{ filme.name }}</div>
-                        <div class="bewertung">
-                            <!-- <ngb-rating [(rate)]="filme.rating">
-                                <ng-template let-fill="fill" let-index="index">
-                                    <i class="bi-star{{fill === 100 ? '-fill' : ''}}" [class.filled]="fill === 100" [class.low]="index < 3"></i>
-                                </ng-template>
-                            </ngb-rating> -->
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="beliebte-filme"></div>
+  </div>
+  <div class="beliebte-filme"></div>
 </div>

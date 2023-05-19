@@ -9,7 +9,7 @@ import { ObenComponent } from './oben/oben.component';
 import { FilmComponent } from './film/film.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-// import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -18,14 +18,15 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     HauptseiteComponent,
     ObenComponent,
-    FilmComponent,
+    FilmComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule, 
-    // NgbRatingModule
+    NgbModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
