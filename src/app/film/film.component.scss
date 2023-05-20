@@ -1,0 +1,14 @@
+.film-container {
+    width: 200rem;
+    margin: 0 auto;
+    .oben {
+        display: flex;
+        .links {
+            width: 2rem;
+            .name {
+                font-size: 2.5rem;
+                font-weight: bold;
+            }
+        }
+    }
+}

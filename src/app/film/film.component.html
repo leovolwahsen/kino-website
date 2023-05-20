@@ -2,9 +2,11 @@
 <div class="film-container">
     <div class="oben">
         <div class="links">
-            <div class="name"></div>
-            <div class="bewertung"></div>
-            <div class="ansicht"></div>
+            <div class="name">{{ film?.name }}</div>
+            <div class="bewertung">{{ film?.rating }}</div>
+            <div class="ansicht">
+                <img [src]="film?.cover" alt="bild von Film Plakat">
+            </div>
         </div>
         <div class="rechts"></div>
     </div>
