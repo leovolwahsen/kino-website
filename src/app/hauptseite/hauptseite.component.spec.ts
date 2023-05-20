@@ -6,10 +6,14 @@ describe('HauptseiteComponent', () => {
   let component: HauptseiteComponent;
   let fixture: ComponentFixture<HauptseiteComponent>;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
       declarations: [HauptseiteComponent]
-    });
+    })
+    .compileComponents();
+  });
+
+    beforeEach(() => {
     fixture = TestBed.createComponent(HauptseiteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

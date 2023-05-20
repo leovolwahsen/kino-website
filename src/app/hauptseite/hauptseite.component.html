@@ -3,24 +3,55 @@
   <div class="gesammten-filme">
     <div class="hyped-filme">
       <div class="hyped">
-        <h5>Beliebtesten Filme</h5>
+        <h4>Meist geschaute Filme</h4>
         <div class="alle-sehen">Alle sehen</div>
       </div>
       <div class="film-miniaturansicht">
-        <div class="film" *ngFor="let filme of tendingeFilme">
-          <div class="ansicht">
-            <img [src]="filme.cover" alt="" />
+        <div class="film" *ngFor="let film of tendingeFilme">
+          <div class="ansicht" (click)="geheZumFilm('gemocht', film.id)">
+            <img [src]="film.cover" alt="" />
           </div>
           <div class="details">
-            <div class="name">{{ filme.name }}</div>
+            <div class="name" (click)="geheZumFilm('gemocht', film.id)">{{ film.name }}</div>
             <div class="bewertung">
               <i class="fa-solid fa-star"></i>
-              <div class="mittig">{{ filme.rating }}</div>
+              <div class="mittig">{{ film.rating }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="kino-filme">
+      <div class="hyped">
+        <h4>Beliebtesten Kino Filme</h4>
+        <div class="alle-sehen">Alle sehen</div>
+      </div>
+      <div class="film-miniaturansicht">
+        <div class="film" *ngFor="let film of kinoFilme">
+          <div class="ansicht" (click)="geheZumFilm('kino', film.id)">
+            <img [src]="film.cover" alt="" />
+          </div>
+          <div class="details">
+            <div class="name" (click)="geheZumFilm('kino', film.id)">{{ film.name }}</div>
+            <div class="bewertung">
+              <i class="fa-solid fa-star"></i>
+              <div class="mittig">{{ film.rating }}</div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="beliebte-filme"></div>
+  <div class="beliebte-filme">
+    <h4>Iconisch Filme</h4>
+    <div class="filme">
+      <div class="film" *ngFor="let film of beliebteFilme">
+        <div class="name" (click)="geheZumFilm('beliebt', film.id)">{{ film.name }}</div>
+        <div class="bewertung">
+          <i class="fa-solid fa-star"></i>
+          <div class="mittig">{{ film.rating }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
