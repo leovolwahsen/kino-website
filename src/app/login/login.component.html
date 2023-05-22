@@ -1,45 +1,23 @@
-<div class="login-container">
-  <img
-    class="film"
-    src="assets/bilder/Kameraband-bild.jpg"
-    alt="Kameraband-bild"
-  />
-  <div class="logo">Kinofilmbewertung</div>
-  <div class="beschreibung">
-    Kinofilmbewertung ist eine umfassende Film-Bewertungswebsite, die
-    Filmbegeisterten eine verlässliche und vielfältige Plattform bietet, um
-    Filme zu entdecken, zu bewerten und Empfehlungen zu erhalten. Mit einer
-    umfangreichen Datenbank von Filmen aus verschiedenen Genres und Ländern
-    können Benutzer mühelos nach ihren Lieblingsfilmen suchen oder neue
-    Entdeckungen machen. Die Website bietet detaillierte Informationen zu jedem
-    Film, darunter Handlungszusammenfassungen, Besetzungslisten, Trailer und
-    Rezensionen von Kritikern und Nutzern.
-  </div>
-  <form>
-  <div class="login-form">
-    <div class="form-gruppe">
-      <label for="benutzername">Benutzername</label>
-      <input
-        type="text" 
-        name="benutzername"
-        class="form-control"
-        [(ngModel)]="benutzername"
-      />
+<div class="topContainer">
+  <div class="main">
+    <input type="checkbox" id="chk" aria-hidden="true" />
+    <div class="signup">
+      <form>
+        <label for="chk" aria-hidden="true">Sign up</label>
+        <input type="text" name="txt" placeholder="User name" required="" />
+        <input type="email" name="email" placeholder="Email" required="" />
+        <input type="password" name="pswd" placeholder="Password" required="" />
+        <button>Sign up</button>
+      </form>
     </div>
-    <div class="form-gruppe">
-      <label for="password">Passwort</label>
-      <input
-        type="password"
-        name="password"
-        autocomplete="on"
-        class="form-control"
-        [(ngModel)]="password"
-      />
-    </div>
-    <div class="btn-container">
-      <div class="error">{{ errorMsg }}</div>
-      <button (click)="login()">Login</button>
+
+    <div class="login">
+      <form>
+        <label for="chk" aria-hidden="true">Login</label>
+        <input type="email" name="email" placeholder="Email" required="" />
+        <input type="password" name="pswd" placeholder="Password" required="" />
+        <button>Login</button>
+      </form>
     </div>
   </div>
-</form>
 </div>
