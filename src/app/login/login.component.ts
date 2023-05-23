@@ -16,13 +16,21 @@ export class LoginComponent implements OnInit {
   };
 
   einloggenObj: any = {
-    benutzername: "",
+    email: "",
     passwort: ""
   };
 
-  constructor() {  }
+  constructor() { 
+
+    
+   }
 
   ngOnInit(): void {
+
+    const gespeicherteLokaleDaten = localStorage.getItem("alleRegistrierteNutzer");
+    if (gespeicherteLokaleDaten != null) {
+      this.alleRegistrierteNutzer = JSON.parse(gespeicherteLokaleDaten);
+    }
   }
 
   beiRegistrierung() {
@@ -36,6 +44,12 @@ export class LoginComponent implements OnInit {
   }
 
   beiEinloggen() {
+    const existiertBenutzerKonto = this.alleRegistrierteNutzer.find(m => m.email == this.einloggenObj.email && m.passwort == this.einloggenObj.passwort);
+    if (existiertBenutzerKonto != undefined) {
+      alert("Nutzer ist erfolgreich eingeloggt.");
+    } else {
+      alert("Falsche Nutzerdaten wurden eingegeben, mitte versuchen Sie es erneut.");
+    }
 
   }
 
