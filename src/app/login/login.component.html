@@ -4,19 +4,19 @@
     <div class="registrieren">
       <form>
         <label for="chk" aria-hidden="true">Registrieren</label>
-        <input type="text" name="txt" placeholder="Benutzername" required="" />
-        <input type="email" name="email" placeholder="Email" required="" />
-        <input type="password" name="pswd" placeholder="Passwort" required="" />
-        <button>Registrieren</button>
+        <input type="text" name="txt" placeholder="Benutzername" required="" [(ngModel)]="registrierteObj.benutzername"/>
+        <input type="email" name="email" placeholder="Email" required="" [(ngModel)]="registrierteObj.email"/>
+        <input type="password" name="pswd" placeholder="Passwort" required="" [(ngModel)]="registrierteObj.passwort"/>
+        <button (click)="beiRegistrierung()">Registrieren</button>
       </form>
     </div>
 
     <div class="einloggen">
       <form>
         <label for="chk" aria-hidden="true">Login</label>
-        <input type="email" name="email" placeholder="Email" required="" />
-        <input type="password" name="pswd" placeholder="Passwort" required="" />
-        <button>Einloggen</button>
+        <input type="email" name="email" placeholder="Email" required="" [(ngModel)]="einloggenObj.benutzername"/>
+        <input type="password" name="pswd" placeholder="Passwort" required="" [(ngModel)]="einloggenObj.passwort"/>
+        <button (click)="beiEinloggen()">Einloggen</button>
       </form>
     </div>
   </div>
