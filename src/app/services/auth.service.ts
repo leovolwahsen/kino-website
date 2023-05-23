@@ -9,9 +9,6 @@ export class AuthService {
 
   constructor(private router: Router) { }
 
-  
-  
-
   logout() {
     this.router.navigate(["login"])
   }
