@@ -1,15 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
 import { HauptseiteComponent } from './hauptseite/hauptseite.component';
 import { FilmComponent } from './film/film.component';
 
 const routes: Routes = [
-  { path: "", redirectTo: "login", pathMatch: "full" },
-  { path: "login", component: LoginComponent },
+  { path: "", redirectTo: "hauptseite", pathMatch: "full" },
   { path: "hauptseite", component: HauptseiteComponent },
-  { path: "film/:type/:id", component: FilmComponent },
-  { path: "**", component: LoginComponent },
+  { path: "film/:type/:id", component: FilmComponent }
 ];
 
 @NgModule({

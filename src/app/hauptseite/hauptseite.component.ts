@@ -3,7 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-hauptseite',
+  selector: 'app-hauptseite', 
   templateUrl: './hauptseite.component.html',
   styleUrls: ['./hauptseite.component.scss']
 })

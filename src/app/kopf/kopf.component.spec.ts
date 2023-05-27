@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ObenComponent } from './oben.component';
+import { KopfComponent } from './kopf.component';
 
-describe('ObenComponent', () => {
-  let component: ObenComponent;
-  let fixture: ComponentFixture<ObenComponent>;
+describe('KopfComponent', () => {
+  let component: KopfComponent;
+  let fixture: ComponentFixture<KopfComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ObenComponent]
+      declarations: [KopfComponent]
     });
-    fixture = TestBed.createComponent(ObenComponent);
+    fixture = TestBed.createComponent(KopfComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
