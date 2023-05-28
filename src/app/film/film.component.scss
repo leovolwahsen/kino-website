@@ -9,10 +9,16 @@
         padding: 3.12rem;
         background-color: #1C1D22;
         color: white;
+        h1 {
+            font-size: 4rem;
+            text-align: center;
+        }
+        
         .oben {
             display: flex;
             .links {
                 width: 28rem;
+                align-content: center;
                 .bewertung {
                     position: relative;
                     text-align: center;
@@ -21,7 +27,7 @@
                     .fa-solid {
                         color: rgb(255, 204, 0);
                         font-size: 5rem;
-                        margin: 1rem;
+                        margin: 0.5rem;
                         filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
                     }
                     .mittig {
@@ -35,7 +41,7 @@
                     }
                 }
                 .name {
-                    font-size: 3.5rem;
+                    font-size: 1.5rem;
                     font-weight: bold;
                     margin-bottom: 2rem;
                     margin-top: -2.5rem;
@@ -51,6 +57,14 @@
                         object-fit: cover;
                     }
                     
+                }
+            }
+            .rechts {
+                width: 56rem;
+                background-color: lightcoral;
+                .beschreibung {
+                    margin: 4rem;
+                    text-align: center;
                 }
             }
         }

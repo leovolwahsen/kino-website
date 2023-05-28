@@ -27,7 +27,7 @@ export class FilmComponent implements OnInit {
       this.url = "http://localhost:4200/assets/daten/kino-filme.json";
     }
     if (this.type === "trendig") {
-      this.url = "http://localhost:4200/assets/daten/trendige-filme.json";
+      this.url = "http://localhost:4200/assets/daten/trendinge-filme.json";
     }
     this.getFilm();
   }
