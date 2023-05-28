@@ -1,34 +1,56 @@
 .film-container {
-    width: 88rem;
-    height: 90vh;
-    margin: 0 auto;
-    padding: 3.12rem;
-    background-color: bisque;
-    .oben {
-        display: flex;
-        .links {
-            width: 28rem;  
-            .name {
-                font-size: 2.5rem;
-                font-weight: bold;
-            }
-            .bewertung {
-                display: flex;
-                align-items: center;
-                margin-bottom: 0.95rem;
-                .bewertung-punkte {
-                    margin-left: 1.25rem;
-                    font-weight: bold;
+    width: 100%;
+    height: 100vh;
+    background-color: #282a31;
+    .film-daten {
+        width: 88rem;
+        height: 100vh;
+        margin: 0 auto;
+        padding: 3.12rem;
+        background-color: #1C1D22;
+        color: white;
+        .oben {
+            display: flex;
+            .links {
+                width: 28rem;
+                .bewertung {
+                    position: relative;
+                    text-align: center;
+                    margin-bottom: 1rem;
+                    margin-right: 20rem;
+                    .fa-solid {
+                        color: rgb(255, 204, 0);
+                        font-size: 5rem;
+                        margin: 1rem;
+                        filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+                    }
+                    .mittig {
+                      position: absolute;
+                      top: 50%;
+                      left: 50%;
+                      color: black;
+                      font-size: 1.5rem;
+                      font-weight: 700;
+                      transform: translate(-50%, -50%);
+                    }
                 }
-            }
-            .ansicht {
-                width: 25rem;
-                height: 31rem;
-                margin-right: 3.1rem;
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
+                .name {
+                    font-size: 3.5rem;
+                    font-weight: bold;
+                    margin-bottom: 2rem;
+                    margin-top: -2.5rem;
+                    margin-left: 13rem;
+                }
+                .ansicht {
+                    width: 17rem;
+                    margin-right: 3.1rem;
+                    margin-left: 10rem;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    
                 }
             }
         }

@@ -1,20 +1,21 @@
 <app-kopf></app-kopf>
 <div class="film-container">
+  <div class="film-daten">
     <div class="oben">
-        <div class="links">
-            <div class="name">
-                {{ film?.name }}
-            </div>
-            <div class="bewertung">
-                <span class="bewertung-punkte">
-                    {{ film?.rating }}
-                </span> 
-            </div>
-            <div class="ansicht">
-                <img [src]="film?.cover">
-            </div>
+      <div class="links">
+        <div class="bewertung">
+          <i class="fa-solid fa-star"></i>
+          <div class="mittig">{{ film.rating }}</div>
         </div>
-        <div class="rechts"></div>
+        <div class="name">
+          {{ film?.name }}
+        </div>
+        <div class="ansicht">
+          <img [src]="film?.cover" />
+        </div>
+      </div>
+      <div class="rechts"></div>
     </div>
     <div class="unten"></div>
+  </div>
 </div>
