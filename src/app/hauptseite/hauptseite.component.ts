@@ -22,21 +22,24 @@ export class HauptseiteComponent implements OnInit {
 
   getTendingeFilme() {
     this.http
-    .get("http:/assets/daten/tendigefilme.json").subscribe((filme) => {
+    .get("http://localhost:4200/assets/daten/tendige-filme.json")
+    .subscribe((filme) => {
       this.tendingeFilme = filme;
     });
   }
 
   getKinoFilme() {
     this.http
-    .get("http:/assets/daten/kinofilme.json").subscribe((filme) => {
+    .get("http://localhost:4200/assets/daten/kino-filme.json")
+    .subscribe((filme) => {
       this.kinoFilme = filme;
     });
   }
 
   getBeliebteFilme() {
     this.http
-    .get("http:/assets/daten/beliebtefilme.json").subscribe((filme) => {
+    .get("http://localhost:4200/assets/daten/beliebte-filme.json")
+    .subscribe((filme) => {
       this.beliebteFilme = filme;
     });
   }

@@ -8,11 +8,11 @@
       </div>
       <div class="film-miniaturansicht">
         <div class="film" *ngFor="let film of tendingeFilme">
-          <div class="ansicht" (click)="geheZumFilm('gemocht', film.id)">
+          <div class="ansicht" (click)="geheZumFilm('trending', film.id)">
             <img [src]="film.cover" alt="" />
           </div>
           <div class="details">
-            <div class="name" (click)="geheZumFilm('gemocht', film.id)">{{ film.name }}</div>
+            <div class="name" (click)="geheZumFilm('trending', film.id)">{{ film.name }}</div>
             <div class="bewertung">
               <i class="fa-solid fa-star"></i>
               <div class="mittig">{{ film.rating }}</div>

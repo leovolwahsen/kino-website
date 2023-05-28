@@ -1,11 +1,17 @@
-<app-hauptseite></app-hauptseite>
+<app-kopf></app-kopf>
 <div class="film-container">
     <div class="oben">
         <div class="links">
-            <div class="name">{{ film?.name }}</div>
-            <div class="bewertung">{{ film?.rating }}</div>
+            <div class="name">
+                {{ film?.name }}
+            </div>
+            <div class="bewertung">
+                <span class="bewertung-punkte">
+                    {{ film?.rating }}
+                </span> 
+            </div>
             <div class="ansicht">
-                <img [src]="film?.cover" alt="bild von Film Plakat">
+                <img [src]="film?.cover">
             </div>
         </div>
         <div class="rechts"></div>

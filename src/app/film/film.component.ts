@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivationEnd } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-film',
@@ -15,19 +15,19 @@ export class FilmComponent implements OnInit {
   filme: any;
   film: any;
 
-  constructor(private route: ActivationEnd, private http: HttpClient) { }
+  constructor(private route: ActivatedRoute, private http: HttpClient) { }
 
   ngOnInit(): void {
     this.type = this.route.snapshot.params["type"];
     this.id = this.route.snapshot.params["id"];
     if (this.type === "beliebt") {
-      this.url = "http://localhost:4200/assets/data/beliebtefilme.json";
+      this.url = "http://localhost:4200/assets/daten/beliebte-filme.json";
     }
     if (this.type === "kino") {
-      this.url = "http://localhost:4200/assets/data/kinofilme.json";
+      this.url = "http://localhost:4200/assets/daten/kino-filme.json";
     }
     if (this.type === "trendig") {
-      this.url = "http://localhost:4200/assets/data/trendigefilme.json";
+      this.url = "http://localhost:4200/assets/daten/tendige-filme.json";
     }
     this.getFilm();
   }

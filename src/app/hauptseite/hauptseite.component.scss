@@ -21,7 +21,7 @@
             }
             .alle-sehen {
                 font-size: 1.25rem;
-                margin-bottom: 1rem;
+                margin-bottom: 0.75rem;
                 font-weight: bold;
                 cursor: pointer;
             }
@@ -62,7 +62,7 @@
                         top: 50%;
                         left: 50%;
                         color: black;
-                        font-size: 1rem;
+                        font-size: 0.75rem;
                         font-weight: 600;
                         transform: translate(-50%, -50%);
                     }
@@ -98,7 +98,7 @@
                     margin-left: 5rem;
                     .fa-solid {
                         color: rgb(255, 204, 0);
-                        font-size: 2.5rem;
+                        font-size: 2.7rem;
                         margin: 2rem;
                         filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
                     }
@@ -107,14 +107,14 @@
                         top: 50%;
                         left: 50%;
                         color: black;
-                        font-size: 0.75rem;
+                        font-size: 0.7rem;
                         font-weight: 600;
                         transform: translate(-50%, -50%);
                     }
                 }
                 .alle-sehen {
                     text-align: right;
-                    margin-top: 2rem;
+                    margin-top: 0.5rem;
                     cursor: pointer;
                 }
             }

@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { KopfComponent } from './kopf/kopf.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
