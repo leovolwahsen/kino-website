@@ -5,17 +5,21 @@
       <div class="links">
         <div class="bewertung">
           <i class="fa-solid fa-star"></i>
-          <div class="mittig">{{ film.rating }}</div>
+          <div class="mittig">{{ film?.bewertung }}</div>
         </div>
         <div class="name">
           {{ film?.name }}
         </div>
         <div class="ansicht">
-          <img [src]="film?.cover" />
+          <img [src]="film?.bild" />
         </div>
       </div>
-      <div class="rechts"></div>
+      <div class="rechts">
+        <div class="beschreibung">
+          {{ film?.beschreibung }}
+        </div>
+      </div>
     </div>
-    <div class="unten"></div>
   </div>
+  <div class="unten"></div>
 </div>

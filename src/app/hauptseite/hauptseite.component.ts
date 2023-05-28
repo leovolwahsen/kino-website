@@ -8,23 +8,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./hauptseite.component.scss']
 })
 export class HauptseiteComponent implements OnInit {
-  tendingeFilme: any;
+  trendingeFilme: any;
   kinoFilme: any;
   beliebteFilme: any;
 
   constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
-    this.getTendingeFilme();
+    this.getTrendingeFilme();
     this.getKinoFilme();
     this.getBeliebteFilme();
   }
 
-  getTendingeFilme() {
+  getTrendingeFilme() {
     this.http
-    .get("http://localhost:4200/assets/daten/tendige-filme.json")
+    .get("http://localhost:4200/assets/daten/trendinge-filme.json")
     .subscribe((filme) => {
-      this.tendingeFilme = filme;
+      this.trendingeFilme = filme;
     });
   }
 
