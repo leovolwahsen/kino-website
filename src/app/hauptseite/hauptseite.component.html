@@ -10,6 +10,7 @@
         <div class="film" *ngFor="let film of trendingeFilme">
           <div class="ansicht" (click)="geheZumFilm('trendig', film.id)">
             <img [src]="film.bild" alt="" />
+            <iframe [src]="film.trailer" frameborder="0"></iframe>
           </div>
           <div class="details">
             <div class="name" (click)="geheZumFilm('trendig', film.id)">{{ film.name }}</div>
