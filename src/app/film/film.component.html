@@ -1,17 +1,21 @@
 <app-kopf></app-kopf>
 <div class="film-container">
-  <div class="film-daten">
-    <h1> {{ film?.name }}</h1>
-    
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/b_yvKh_ps18" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <div class="film-daten" >
+    <h1>{{ film?.name }}</h1>
+    <iframe width="560" height="315" 
+    [src]="film.trailer" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write;
+     encrypted-media; gyroscope; picture-in-picture;
+     web-share" 
+    allowfullscreen>
+    </iframe>
     <div class="oben">
       <div class="links">
         <div class="bewertung">
           <i class="fa-solid fa-star"></i>
           <div class="mittig">{{ film?.bewertung }}</div>
-        </div>
-        <div class="name">
-          {{ film?.name }}
         </div>
         <div class="ansicht">
           <img [src]="film?.bild" alt="" />

@@ -10,10 +10,10 @@
         <div class="film" *ngFor="let film of trendingeFilme">
           <div class="ansicht" (click)="geheZumFilm('trendig', film.id)">
             <img [src]="film.bild" alt="" />
-            <iframe [src]="film.trailer" frameborder="0"></iframe>
           </div>
           <div class="details">
-            <div class="name" (click)="geheZumFilm('trendig', film.id)">{{ film.name }}</div>
+            <div class="name" (click)="geheZumFilm('trendig', film.id)">
+              {{ film.name }}</div>
             <div class="bewertung">
               <i class="fa-solid fa-star"></i>
               <div class="mittig">{{ film.bewertung }}</div>
@@ -33,7 +33,8 @@
             <img [src]="film.bild" alt="" />
           </div>
           <div class="details">
-            <div class="name" (click)="geheZumFilm('kino', film.id)">{{ film.name }}</div>
+            <div class="name" (click)="geheZumFilm('kino', film.id)">
+              {{ film.name }}</div>
             <div class="bewertung">
               <i class="fa-solid fa-star"></i>
               <div class="mittig">{{ film.bewertung }}</div>
@@ -47,7 +48,8 @@
     <h4>Iconisch Filme</h4>
     <div class="filme">
       <div class="film" *ngFor="let film of beliebteFilme">
-        <div class="name" (click)="geheZumFilm('beliebt', film.id)">{{ film.name }}</div>
+        <div class="name" (click)="geheZumFilm('beliebt', film.id)">
+          {{ film.name }}</div>
         <div class="bewertung">
           <i class="fa-solid fa-star"></i>
           <div class="mittig">{{ film.bewertung }}</div>
