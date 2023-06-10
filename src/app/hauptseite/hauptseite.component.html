@@ -3,8 +3,7 @@
   <div class="gesammten-filme">
     <div class="hyped-filme">
       <div class="hyped">
-        <h4>Meistgeschauten Filme</h4>
-        <div class="alle-sehen">Alle sehen</div>
+        <h3>Meistgeschauten Filme von 2023</h3>
       </div>
       <div class="film-miniaturansicht">
         <div class="film" *ngFor="let film of trendingeFilme">
@@ -14,18 +13,14 @@
           <div class="details">
             <div class="name" (click)="geheZumFilm('trendig', film.id)">
               {{ film.name }}</div>
-            <div class="bewertung">
-              <i class="fa-solid fa-star"></i>
-              <div class="mittig">{{ film.bewertung }}</div>
-            </div>
           </div>
         </div>
       </div>
     </div>
+    
     <div class="kino-filme">
       <div class="hyped">
-        <h4>Beliebtesten Kino Filme</h4>
-        <div class="alle-sehen">Alle sehen</div>
+        <h3>Aktuelle top Kinofilme</h3>
       </div>
       <div class="film-miniaturansicht">
         <div class="film" *ngFor="let film of kinoFilme">
@@ -35,17 +30,13 @@
           <div class="details">
             <div class="name" (click)="geheZumFilm('kino', film.id)">
               {{ film.name }}</div>
-            <div class="bewertung">
-              <i class="fa-solid fa-star"></i>
-              <div class="mittig">{{ film.bewertung }}</div>
-            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="beliebte-filme">
-    <h4>Iconisch Filme</h4>
+    <h3>Iconisch Filme</h3>
     <div class="filme">
       <div class="film" *ngFor="let film of beliebteFilme">
         <div class="name" (click)="geheZumFilm('beliebt', film.id)">
