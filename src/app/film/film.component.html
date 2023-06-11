@@ -1,32 +1,59 @@
 <app-kopf></app-kopf>
 <div class="film-container">
-  <div class="film-daten" >
-    <h1>{{ film?.name }}</h1>
-    <iframe width="560" height="315" 
-    [src]="film.trailer" 
-    title="YouTube video player" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write;
+  <div class="film-daten">
+    <article>
+      <h1>{{ film?.name }}</h1>
+      <h6>Kinostart: 17.05.2023 - Dramafilm - 130 Min</h6>
+      <div class="bewertung">
+        <i class="fa-solid fa-star"></i>
+        <div class="mittig">{{ film?.bewertung }}</div>
+      </div>
+      <iframe
+        width="560"
+        height="315"
+        [src]="film.trailer"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write;
      encrypted-media; gyroscope; picture-in-picture;
-     web-share" 
-    allowfullscreen>
-    </iframe>
+     web-share"
+        allowfullscreen
+      >
+      </iframe>
+      <p>© Universal Studios</p>
+    </article>
+
     <div class="oben">
       <div class="links">
-        <div class="bewertung">
-          <i class="fa-solid fa-star"></i>
-          <div class="mittig">{{ film?.bewertung }}</div>
-        </div>
         <div class="ansicht">
           <img [src]="film?.bild" alt="" />
         </div>
       </div>
       <div class="rechts">
         <div class="beschreibung">
-          {{ film?.beschreibung }} 
+          {{ film?.beschreibung }}
         </div>
       </div>
     </div>
+    <span
+      >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid facere
+      dolor rem unde quis iste numquam, consequuntur non itaque labore excepturi
+      id ab nesciunt placeat, sed illo consequatur nemo eos! Ipsa magni
+      perferendis exercitationem quae cupiditate qui dignissimos, quis nisi
+      nobis fuga dolorum reprehenderit at, ea totam laudantium. Voluptatibus
+      perferendis accusantium quasi eos veritatis. Eos earum accusamus
+      praesentium officiis odit? Fuga nisi voluptas necessitatibus magnam dicta
+      hic quasi perspiciatis rem error sapiente dolores quo minus est eaque,
+      odio quis quidem numquam, repudiandae earum accusamus et officia quisquam
+      consectetur esse. Optio! Rerum debitis cumque eius maxime quisquam
+      officiis alias harum, voluptatibus, iusto dignissimos ullam perspiciatis
+      consequuntur ipsa corporis amet id obcaecati veniam reprehenderit. Facilis
+      ad iure consectetur voluptates cupiditate molestias sunt. Ducimus
+      voluptatem eveniet provident, dolor dolorem, quod voluptates, magnam
+      reprehenderit laboriosam nisi consectetur. Molestiae ipsa esse rerum
+      veniam, rem fuga blanditiis voluptatum repudiandae totam exercitationem
+      vitae cumque, reprehenderit, provident explicabo.</span
+    >
   </div>
   <div class="unten"></div>
 </div>
