@@ -4,10 +4,11 @@
   padding: 0rem;
   background-color: #282a31;
   color: white;
-  height: 100vh;
+  height: 100%;
   .gesammten-filme {
     width: 80%;
     height: 100%;
+    min-height: calc(100vh - 5rem);
     border-right: 4rem solid #1c1d22;
     padding: 1rem 2.25rem;
     .hyped {
@@ -22,19 +23,21 @@
         text-decoration: underline;
       }
     }
-    .film-miniaturansicht {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 1rem;
-      min-width: 5rem;
+    .film-box {
+      margin: 1.25rem;
       .film {
-        margin-top: 2rem;
-        object-fit: contain;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
         .ansicht {
-          width: 11.25rem;
+          position: relative;
+          flex: 1;
+          max-width: 19rem;
           cursor: pointer;
           img {
             border-radius: 0.32rem;
+            width: 11.25rem;
           }
         }
         .details {
@@ -73,6 +76,7 @@
   }
   .beliebte-filme {
     width: 20%;
+    height: 100%;
     min-height: calc(100vh - 5rem);
     padding: 1rem 3.5rem;
     background-color: #1c1d22;

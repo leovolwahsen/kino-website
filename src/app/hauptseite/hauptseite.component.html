@@ -1,28 +1,11 @@
 <app-kopf></app-kopf>
 <div class="hauptseite-container">
   <div class="gesammten-filme">
-    <!-- <div class="hyped-filme">
-      <div class="hyped">
-        <h3>Meistgeschauten Filme von 2023</h3>
-      </div>
-      <div class="film-miniaturansicht">
-        <div class="film" *ngFor="let film of trendingeSerien">
-          <div class="ansicht" (click)="geheZumFilm('trendig', film.id)">
-            <img [src]="film.bild" alt="" />
-          </div>
-          <div class="details">
-            <div class="name" (click)="geheZumFilm('trendig', film.id)">
-              {{ film.name }}</div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    
     <div class="kino-filme">
       <div class="hyped">
         <h3>Aktuelle top Kinofilme</h3>
       </div>
-      <div class="film-miniaturansicht">
+      <div class="film-box">
         <div class="film" *ngFor="let film of kinoFilme">
           <div class="ansicht" (click)="geheZumFilm('kino', film.id)">
             <img [src]="film.bild" alt="" />

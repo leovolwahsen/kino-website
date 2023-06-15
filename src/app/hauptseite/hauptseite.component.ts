@@ -8,24 +8,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./hauptseite.component.scss']
 })
 export class HauptseiteComponent implements OnInit {
-  trendingeSerien: any;
   kinoFilme: any;
   beliebteFilme: any;
 
   constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
-    this.getTrendingeSerien();
     this.getKinoFilme();
     this.getBeliebteFilme();
-  }
-
-  getTrendingeSerien() {
-    this.http
-    .get("http://localhost:4200/assets/daten/trendinge-serien.json")
-    .subscribe((filme) => {
-      this.trendingeSerien = filme;
-    });
   }
 
   getKinoFilme() {

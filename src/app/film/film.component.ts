@@ -28,9 +28,6 @@ export class FilmComponent implements OnInit {
     if (this.type === "kino") {
       this.url = "http://localhost:4200/assets/daten/kino-filme.json";
     }
-    if (this.type === "trendig") {
-      this.url = "http://localhost:4200/assets/daten/trendinge-serien.json";
-    }
     this.getFilm();
     const iframe = this.hostElement.nativeElement.querySelector('iframe');
     iframe.src = 'https://www.youtube.com/embed/b_yvKh_ps18';
