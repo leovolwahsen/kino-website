@@ -9,7 +9,7 @@
     width: 80%;
     height: 100%;
     min-height: calc(100vh - 5rem);
-    border-right: 4rem solid #1c1d22;
+    border-right: 4rem solid #282a31;
     padding: 1rem 2.25rem;
     .hyped {
       display: flex;
@@ -26,14 +26,16 @@
     .film-box {
       margin: 1.25rem;
       .film {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        position: relative;
+        display: inline-block;
+        justify-content: left;
+        
         .ansicht {
           position: relative;
-          flex: 1;
+          flex: 3;
           max-width: 19rem;
+          height: 17rem;
+          margin: 0.75rem;
           cursor: pointer;
           img {
             border-radius: 0.32rem;
@@ -77,7 +79,7 @@
   .beliebte-filme {
     width: 20%;
     height: 100%;
-    min-height: calc(100vh - 5rem);
+    // min-height: calc(100vh - 5rem);
     padding: 1rem 3.5rem;
     background-color: #1c1d22;
     text-transform: uppercase;
