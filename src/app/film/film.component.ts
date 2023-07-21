@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ElementRef } from '@angular/core';
+
 @Component({
   selector: 'app-film',
   templateUrl: './film.component.html',
@@ -14,6 +15,7 @@ export class FilmComponent implements OnInit {
   url = "";
   filme: any;
   film: any;
+  safeUrl: unknown;
 
 
   constructor(private route: ActivatedRoute, private http: HttpClient, private hostElement: ElementRef) { }
@@ -29,8 +31,8 @@ export class FilmComponent implements OnInit {
       this.url = "http://localhost:4200/assets/daten/kino-filme.json";
     }
     this.getFilm();
-    const iframe = this.hostElement.nativeElement.querySelector('iframe');
-    iframe.src = 'https://www.youtube.com/embed/b_yvKh_ps18';
+    // const iframe = this.hostElement.nativeElement.querySelector('iframe');
+    // iframe.src = "url?.trailer";
   }
 
   getFilm() {
