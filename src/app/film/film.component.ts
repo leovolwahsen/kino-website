@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ElementRef } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-film',
@@ -15,10 +16,13 @@ export class FilmComponent implements OnInit {
   url = "";
   filme: any;
   film: any;
-  safeUrl: unknown;
+  iframeUrl: SafeResourceUrl;
 
 
-  constructor(private route: ActivatedRoute, private http: HttpClient, private hostElement: ElementRef) { }
+  constructor(private route: ActivatedRoute, private http: HttpClient, private hostElement: ElementRef, private sanitizer: DomSanitizer) {
+
+    this.iframeUrl = this.sanitizer.bypassSecurityTrustResourceUrl('url');
+   }
 
   ngOnInit(): void {
     
@@ -43,6 +47,7 @@ export class FilmComponent implements OnInit {
         );
         if(index > -1) {
           this.film = this.filme[index];
+          this.iframeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.film.trailer);
         }
     });
   }
