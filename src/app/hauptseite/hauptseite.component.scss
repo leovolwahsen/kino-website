@@ -13,8 +13,9 @@
     padding: 1rem 2.25rem;
     .hyped {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      align-items: baseline;
+      justify-content: space-around;
+      align-items: stretch;
       h3 {
         text-transform: uppercase;
         padding-left: 0.7rem;
@@ -28,7 +29,7 @@
       .film {
         position: relative;
         display: inline-block;
-        justify-content: left;
+        justify-content: space-between;
         align-content: start;
         .ansicht {
           position: relative;
@@ -79,7 +80,6 @@
   .beliebte-filme {
     width: 20%;
     height: 100%;
-    // min-height: calc(100vh - 5rem);
     padding: 1rem 3.5rem;
     background-color: #1c1d22;
     text-transform: uppercase;
@@ -89,6 +89,7 @@
       margin-bottom: 1rem;
       margin-top: 1rem;
       text-decoration: underline;
+     
     }
     .filme {
       .film {
